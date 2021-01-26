@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Resolve} from '@angular/router';
-import {UserService} from '../user/user.service';
 import {User} from '../../models/User';
+import {UserService} from '../user/user.service';
 import {Observable} from 'rxjs';
 
 @Injectable({
