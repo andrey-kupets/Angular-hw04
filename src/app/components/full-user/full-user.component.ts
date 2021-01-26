@@ -11,6 +11,7 @@ export class FullUserComponent implements OnInit {
 
   user: User;
 
+
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
 
     this.activatedRoute.params.subscribe(value => {
@@ -19,6 +20,10 @@ export class FullUserComponent implements OnInit {
       // console.log(history.state);
     })
 
+  }
+
+  showPostsOfUser(): void {
+    console.log(this.user.id);
   }
 
   ngOnInit(): void {

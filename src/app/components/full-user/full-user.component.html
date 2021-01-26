@@ -3,7 +3,7 @@
   <b>Address: </b><br>
   {{user.address.city}} - {{user.address.street}} <br>
   lat: {{user.address.geo.lat}} / lng: {{user.address.geo.lng}} <br>
-  <button>show posts</button>
+  <button (click)="showPostsOfUser()">show posts</button>
 <!--  TODO posts by url with router-outlet-->
 <router-outlet></router-outlet>
 </div>

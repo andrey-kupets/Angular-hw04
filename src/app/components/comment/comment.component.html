@@ -1,0 +1,5 @@
+<div *ngIf="comment.id <=10">
+  {{comment.id}} - {{comment.name}}
+<!--  <a [routerLink]="[comment.id]">details</a>-->
+  <button (click)="goTo()">details</button>
+</div>

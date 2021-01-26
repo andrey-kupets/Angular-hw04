@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="post.id <= 10">
   {{post.id}} -
   {{post.title}}
   <button (click)="goTo()">details</button>
