@@ -17,6 +17,7 @@ import { CommentComponent } from './components/comment/comment.component';
 import { FullCommentComponent } from './components/full-comment/full-comment.component';
 import {CommentResolveService} from './services/resolves/comment-resolve.service';
 import { UserPostsComponent } from './components/user-posts/user-posts.component';
+import { SelectedPostComponent } from './components/selected-post/selected-post.component';
 
 const routes: Routes = [
   {path: 'users', component: UsersComponent, resolve: {dataRequestUsers: UserResolveService},
@@ -36,7 +37,7 @@ const routes: Routes = [
     {path: ':id', component: FullCommentComponent}
  ]
   },
-  {path: 'posts/UserId/:id', component: UserPostsComponent}
+  {path: 'posts/userId/:id', component: UserPostsComponent, pathMatch: 'full'}
 ];
 
 @NgModule({
@@ -51,7 +52,8 @@ const routes: Routes = [
     CommentsComponent,
     CommentComponent,
     FullCommentComponent,
-    UserPostsComponent
+    UserPostsComponent,
+    SelectedPostComponent
   ],
   imports: [
     BrowserModule,
